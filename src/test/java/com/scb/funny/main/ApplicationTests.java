@@ -1,7 +1,7 @@
 package com.scb.funny.main;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Test;
@@ -33,9 +33,9 @@ public class ApplicationTests {
 	public void base64() {
 		String funnyStr = "TXkgbmFtZSBpcyBCZW4=";
 		String resp = Base64Util.decode(funnyStr);
-		assertThat(resp).isEqualTo("My name is Ben");
+		assertEquals("My name is Ben", resp);
 		resp = Base64Util.encode(resp);
-		assertThat(resp).isEqualTo("TXkgbmFtZSBpcyBCZW4=");
+		assertEquals("TXkgbmFtZSBpcyBCZW4=", resp);
 	}
 	
 	@Test
@@ -52,14 +52,14 @@ public class ApplicationTests {
 	public void replaceNumber() {
 		String funnyStr = "My name is Ben";
 		String resp = ReplaceSpaceUtil.asNumber(funnyStr);
-		assertThat(resp).isEqualTo("My1name2is3Ben");
+		assertEquals("My1name2is3Ben", resp);
 	}
 	
 	@Test
 	public void restApi() {
 		String req = "TXkgbmFtZSBpcyBCZW4=";
 		ResponseEntity<String> resp = this.restTemplate.getForEntity("/funny/?funnyStr="+req, String.class);
-		assertThat(resp.getBody()).isEqualTo("bmViM3NpMmVtYW4xeW0=");
-		assertThat(resp.getStatusCode()).isEqualTo(HttpStatus.OK);
+		assertEquals("bmViM3NpMmVtYW4xeW0=", resp.getBody());
+		assertEquals(HttpStatus.OK, resp.getStatusCode());
 	}
 }
