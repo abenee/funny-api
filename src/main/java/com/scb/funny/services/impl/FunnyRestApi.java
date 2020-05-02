@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.scb.funny.exception.ServiceException;
 import com.scb.funny.services.FunnyServices;
 
+import io.swagger.annotations.Api;
+
 @RestController
+@Api(tags = "Funny Api")
 public class FunnyRestApi {
 	
 	@RequestMapping(
