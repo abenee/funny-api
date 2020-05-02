@@ -23,9 +23,8 @@ public class FunnyServices {
 				 
 				 if (!AlphabetUtil.isAlphaBet(funnyStr)) { //check input is Alphabet
 					 throw new ServiceException("It's not AlphaBet");
-				 } else {
-					 log.debug("Alphabet check: "+ Boolean.TRUE);
-				 }
+				 } 
+				 log.debug("Alphabet check: "+ Boolean.TRUE);
 				 
 				 funnyStr = funnyStr.toLowerCase();	//make as lower case
 				 log.debug("Lower case: "+ funnyStr);
