@@ -1,1 +1,1 @@
-SCB Dev Challange : Funniest Api Project 
+SCB Dev Challenge : Funniest Api Project 
