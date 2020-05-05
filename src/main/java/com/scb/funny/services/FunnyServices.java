@@ -26,7 +26,7 @@ public class FunnyServices {
 				 } 
 				 log.debug("Alphabet check: "+ Boolean.TRUE);
 				 
-				 if(!AlphabetUtil.isUpper(funnyStr)) { //check English Capital Letter
+				 if (!AlphabetUtil.isUpper(funnyStr)) { //check English Capital Letter
 					 throw new ServiceException("It's not English Capital Letter");
 				 }
 				 
