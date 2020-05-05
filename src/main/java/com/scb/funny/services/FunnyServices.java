@@ -26,6 +26,10 @@ public class FunnyServices {
 				 } 
 				 log.debug("Alphabet check: "+ Boolean.TRUE);
 				 
+				 if(!AlphabetUtil.isUpper(funnyStr)) { //check English Capital Letter
+					 throw new ServiceException("It's not English Capital Letter");
+				 }
+				 
 				 funnyStr = funnyStr.toLowerCase();	//make as lower case
 				 log.debug("Lower case: "+ funnyStr);
 				 

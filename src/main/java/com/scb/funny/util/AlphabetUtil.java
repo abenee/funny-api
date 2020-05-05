@@ -9,4 +9,9 @@ public class AlphabetUtil {
 		st = StringUtils.deleteWhitespace(st);
 		return StringUtils.isAlpha(st);
 	}
+	
+	public static boolean isUpper(String st) {
+		st = StringUtils.deleteWhitespace(st);
+		return StringUtils.isAllUpperCase(st);
+	}
 }
