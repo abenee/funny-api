@@ -25,9 +25,9 @@ public class ApplicationTests {
 	
 	@Test
 	public void restApi() {
-		String req = "TXkgbmFtZSBpcyBCZW4=";
+		String req = "TVkgIE5BTUUgICBJUyAgICBCRU4=";
 		ResponseEntity<String> resp = this.restTemplate.getForEntity("/funny/?funnyStr="+req, String.class);
-		assertEquals("bmViM3NpMmVtYW4xeW0=", resp.getBody());
+		assertEquals("bmViNHNpM2VtYW4yeW0=", resp.getBody());
 		assertEquals(HttpStatus.OK, resp.getStatusCode());
 	}
 }

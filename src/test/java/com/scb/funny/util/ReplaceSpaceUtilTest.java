@@ -10,6 +10,6 @@ class ReplaceSpaceUtilTest {
 	public void replaceNumber() {
 		String funnyStr = "My name is Ben";
 		String resp = ReplaceSpaceUtil.asNumber(funnyStr);
-		assertEquals("My1name2is3Ben", resp);
+		assertEquals("My1name1is1Ben", resp);
 	}
 }
