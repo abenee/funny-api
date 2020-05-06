@@ -25,7 +25,7 @@ public class SwaggerConfig {
 				apiInfo(new ApiInfoBuilder()
 						.version("0.1")
 						.title("Funny Webservice API")
-						.description("SCB Dev Challange Project")
+						.description("SCB Dev Challenge Project")
 						.build());
 		
 	}
